@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2016 Baidu.com, Inc. All Rights Reserved
 #
 # 
 """
@@ -41,8 +40,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-f', '--file')  # 输入img文件
     parser.add_argument('-o', '--output')  # 输出的文本文件
-    parser.add_argument('--width', type=int, default=20)  # 输出字符画的宽度
-    parser.add_argument('--height', type=int, default=20)  # 输出字符画的高度
+    parser.add_argument('--width', type=int, default=80)  # 输出字符画的宽度
+    parser.add_argument('--height', type=int, default=80)  # 输出字符画的高度
 
     # 参数获取
     args = parser.parse_args()
@@ -56,7 +55,8 @@ if __name__ == '__main__':
     # 图片文件解析
     img = Image.open(img)
     img = img.resize((width, height), Image.NEAREST)
-    img.save('./pixel.png')
+    # img.save('./pixel.png')
+
 
     txt = ''
     for i in range(height):
