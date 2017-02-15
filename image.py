@@ -2,15 +2,6 @@
 #
 #
 # 
-"""
-文件说明：
-
-File   : image.py
-
-Authors: zhangshuhao01@baidu.com
-Date   : 2016/11/23
-Comment: 
-"""
 # 标准库
 from PIL import Image
 import argparse
